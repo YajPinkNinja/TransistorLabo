@@ -1,0 +1,38 @@
+<!-- HTML generated using hilite.me -->
+    <div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+    <pre style="margin: 0; line-height: 125%">
+    <span style="color: #66d9ef">const</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">drukknop</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #66d9ef">const</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">schakeling</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">7</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">waarde</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #66d9ef">bool</span> <span style="color: #f8f8f2">state</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">false;</span>
+    <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">setup</span><span style="color: #f8f8f2">()</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">pinMode(schakeling,</span> <span style="color: #f8f8f2">OUTPUT);</span>
+        <span style="color: #f8f8f2">pinMode(drukknop,</span> <span style="color: #f8f8f2">INPUT);</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">loop</span><span style="color: #f8f8f2">()</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(digitalRead(drukknop)){</span>
+            <span style="color: #66d9ef">while</span><span style="color: #f8f8f2">(digitalRead(drukknop)</span><span style="color: #f92672">==</span><span style="color: #f8f8f2">HIGH){</span>
+                <span style="color: #f8f8f2">delay(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">);</span>
+            <span style="color: #f8f8f2">}</span>
+            <span style="color: #66d9ef">switch</span><span style="color: #f8f8f2">(state){</span>
+                <span style="color: #66d9ef">case</span> <span style="color: #f8f8f2">true</span>:
+                    <span style="color: #f8f8f2">state</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">false;</span>
+                    <span style="color: #f8f8f2">digitalWrite(schakeling,</span> <span style="color: #f8f8f2">LOW);</span>
+                    <span style="color: #66d9ef">break</span><span style="color: #f8f8f2">;</span>
+                <span style="color: #66d9ef">case</span> <span style="color: #f8f8f2">false</span>:
+                    <span style="color: #f8f8f2">state</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">true;</span>
+                    <span style="color: #f8f8f2">digitalWrite(schakeling,</span> <span style="color: #f8f8f2">HIGH);</span>
+                <span style="color: #66d9ef">break</span><span style="color: #f8f8f2">;</span>
+            <span style="color: #f8f8f2">}</span>
+        <span style="color: #f8f8f2">}</span>
+    <span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<hr>
+
+<b>Video:</b> <br>
+
+<iframe width="560" height="315" src="Video.mp4" frameborder="0" allowfullscreen></iframe>
